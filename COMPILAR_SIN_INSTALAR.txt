@@ -1,0 +1,29 @@
+COMPILAR EL MOD SIN INSTALAR JAVA NI GRADLE EN TU PC
+Minecraft Java 1.21.11 + NeoForge
+
+1. Crea un repositorio en github.com/new y déjalo privado si prefieres.
+2. Abre el repositorio > Add file > Upload files.
+3. Extrae este ZIP en tu PC. Sube TODOS los archivos y carpetas extraídos,
+   incluido .github/workflows/compilar-jar.yml. NO subas el ZIP como un único archivo.
+   Los archivos build.gradle, settings.gradle y gradle.properties deben quedar
+   en la raíz del repositorio (NO dentro de otra carpeta).
+4. Confirma la subida con "Commit changes".
+5. Ve a la pestaña Actions > Compilar Taladro Autónomo. Si GitHub requiere
+   habilitar Actions, sigue el aviso del repositorio.
+6. El proceso se ejecuta automáticamente al subir los archivos. Si no ocurre,
+   ve a "Run workflow" para iniciarlo.
+7. Si el estado es VERDE, abre la ejecución y descarga el archivo en Artifacts
+   llamado TaladroAutonomo-1.21.11-JAR.
+8. Descomprime el artifact: el archivo .jar dentro es el mod para mods/.
+
+SI SALE ROJO:
+- El mod todavía es experimental y puede haber errores de código o API.
+- Abre la ejecución, copia el error de la etapa "Compilar mod con NeoForge"
+  y compártelo en el chat para corregirlo.
+
+IMPORTANTE:
+- Este proyecto NO se ha podido compilar ni probar aquí por no tener acceso
+  a las dependencias de NeoForge/Minecraft. El workflow automatiza el intento,
+  pero no garantiza que la compilación pase.
+- NO renombres un archivo ZIP a JAR: no será un mod funcional.
+- Haz pruebas en un mundo temporal, nunca en tu partida principal.
